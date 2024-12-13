@@ -56,7 +56,7 @@ jobs:
 
       # Run the Databricks workflow named "my-job" as defined in the
       # bundle that was just deployed.
-      - run: databricks bundle run devops_no_mlflow_pipeline --refresh-all
+      - run: databricks bundle run devops_no_mlflow_pipeline --params input_table=prod.scoring.input,predictions_table=prod.scoring.predictions --refresh-all
         working-directory: .
         env:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_PROD_WS_TOKEN }}
