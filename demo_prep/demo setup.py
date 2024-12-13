@@ -45,7 +45,3 @@ df = df.withColumn("petal_length", df["petal_length"].cast(FloatType()))
 df = df.withColumn("petal_width", df["petal_width"].cast(FloatType()))
 
 df.write.format("delta").mode("overwrite").saveAsTable(f"{PROD_CATALOG_NAME}.{PROD_SCHEMA_NAME}.input")
-
-# COMMAND ----------
-
-

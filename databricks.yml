@@ -1,0 +1,21 @@
+bundle:
+  name: devops_no_mlflow_pipeline
+
+resources:
+  jobs:
+    devops_no_mlflow_pipeline:
+      name: training_scoring
+      tasks:
+        - task_key: training_scoring
+          notebook_task:
+            notebook_path: /Workspace/Users/antonio.pinheirofilho@databricks.com/.bundle/devops_no_mlflow_pipeline/prod/files/src/train and score
+            base_parameters:
+              train_dataset: "/databricks-datasets/Rdatasets/data-001/csv/datasets/iris.csv"
+              input_table: "prod.scoring.input"
+              predictions_table: "prod.scoring.predictions"
+            source: WORKSPACE
+
+targets:
+  prod:
+    workspace:
+      host: https://adb-984752964297111.11.azuredatabricks.net/

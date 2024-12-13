@@ -21,9 +21,9 @@
 
 # COMMAND ----------
 
-train_dataset = "/databricks-datasets/Rdatasets/data-001/csv/datasets/iris.csv"
-input_table = "prod.scoring.input"
-predictions_table = "prod.scoring.predictions"
+train_dataset = dbutils.widgets.get("train_dataset")
+input_table = dbutils.widgets.get("input_table")
+predictions_table = dbutils.widgets.get("predictions_table")
 
 # COMMAND ----------
 
