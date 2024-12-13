@@ -9,6 +9,9 @@ resources:
         - task_key: training_scoring
           notebook_task:
             notebook_path: /Workspace/Users/antonio.pinheirofilho@databricks.com/.bundle/devops_no_mlflow_pipeline/prod/files/src/train and score
+            base_parameters:
+              input_table: ""
+              predictions_table: ""
             source: WORKSPACE
 
 targets:
