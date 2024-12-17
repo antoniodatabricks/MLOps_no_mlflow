@@ -16,7 +16,7 @@ def process_input(input_table, prediction_table):
 
         w = WorkspaceClient()
 
-        waiter = w.jobs.run_now_and_wait(job_id="886001476856551", 
+        waiter = w.jobs.run_now_and_wait(job_id="1071752157059301", 
                                          job_parameters={"input_table": input_table, 
                                                          "predictions_table": prediction_table})
         return True, waiter.state.life_cycle_state
