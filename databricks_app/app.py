@@ -20,7 +20,7 @@ def process_input(input_table, department):
         schema_output = "default" #TODO: Parameterize this
         output_table = f"{catalog_output}.{schema_output}.{department}_output_table"
 
-        w.jobs.run_now(job_id="1071752157059301",
+        w.jobs.run_now(job_id="357525854436207",
                        job_parameters={"input_table": input_table, 
                                        "predictions_table": output_table})
         
