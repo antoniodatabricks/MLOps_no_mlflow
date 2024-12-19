@@ -8,7 +8,7 @@ resources:
       tasks:
         - task_key: training_scoring
           notebook_task:
-            notebook_path: /Workspace/Users/antonio.pinheirofilho@databricks.com/.bundle/devops_no_mlflow_pipeline/prod/files/src/train and score
+            notebook_path: /Workspace/Users/xxx@xxx.com/.bundle/devops_no_mlflow_pipeline/prod/files/src/train and score
             source: WORKSPACE
       queue:
         enabled: true
@@ -21,4 +21,4 @@ resources:
 targets:
   prod:
     workspace:
-      host: https://adb-3022319736923414.14.azuredatabricks.net/
+      host: https://xxx.xxx.azuredatabricks.net/
